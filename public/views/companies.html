@@ -1,0 +1,38 @@
+<div class="company drop">
+    <div class="container">
+      <h1 class="text-center company-h1">List of Companies</h1>
+  
+      <div class="form-group col-md-12">
+        <input type="text" class="form-control" placeholder="Search for a company" ng-model="companySearch">
+      </div>
+  
+      <div class="row company-section">
+  
+        <table class="table table-hover">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone #</th>
+            <th>Suite #</th>
+            <th>Contact</th>
+            <th>Max Spaces</th>
+            <th>Property ID</th>
+          </tr>
+          <div class="form-group col-md-12 middle">
+  
+          </div>
+          <tr ng-repeat="company in companies | filter: companySearch" ui-sref="company({id: company.id})">
+            <td>{{ company.companyName }}</td>
+            <td>{{ company.companyAddress }}</td>
+            <td>{{ company.companyEmail }}</td>
+            <td>{{ company.companyPhone }}</td>
+            <td>{{ company.companySuiteNumber }}</td>
+            <td>{{ company.companyContact }}</td>
+            <td>{{ company.companyMaxSpaces }}</td>
+            <td class="text-center">{{ company.propertyId }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>

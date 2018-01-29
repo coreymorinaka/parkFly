@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="parkFlyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="icon" href="./images/icon.jpg" type="image/gif" sizes="16x16"> -->
+
+    <title>parkFly</title>
+
+    <!-- Google Font - Open Sans -->
+    <link async href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- BoostStrap CDN 4.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"></script>
+    <!-- Bootstrap CDN 3.3.7 -->
+    <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Angular CDN 1.6.5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <!-- Angular UI Router CDN 0.4.2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <!-- Angular-barcode -->
+    <script type="text/javascript" src="./libs/angular-barcode.js"></script>
+    <!-- JQuery CDN 3.3.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8cbt70xx_HoakLeuw-uaUGAauyEHTzek" defer></script>
+    <!-- ng File Upload  -->
+    <script type="text/javascript" src="./libs/ng-file-upload.min.js"></script>
+    <script type="text/javascript" src="./libs/ng-file-upload-shim.min.js"></script>
+</head>
+
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container" ng-controller = "indexController">
+                <ul class="nav nav-pills">
+                    <a class="navbar-brand" href="#">
+                        <img src="./images/logo_blue.png" alt="" width="100" height="30">
+                    </a>
+                    <!-- <li class="padding" role="presentation">
+                                <button class="btn btn-link" onclick="display('about')">About</button>
+                            </li> -->
+                    <!-- <li class="padding" role="presentation" ng-show="employeeService.returnCurrentUser() == 0">
+                        <button class="btn btn-link" ng-click="display('company')">Company</button>
+                    </li>
+                    <li class="padding" role="presentation" ng-show="employeeService.returnCurrentUser() == 0">
+                        <button class="btn btn-link" ng-click="display('info')">Information</button>
+                    </li> -->
+
+                    <!-- <li class="padding" role="presentation" ng-show="employeeService.returnCurrentUser() == 1">
+                            <button class="btn btn-link" ui-sref="car">Car</button>
+                    </li> -->
+                    <li class="padding" role="presentation" ng-show="employeeService.returnCurrentUser() == 0">
+                            <button class="btn btn-link" ui-sref="newEmployee">Sign-up</button>
+                    </li> 
+
+
+
+                    <li class="navbar-right" role="presentation">
+                        <a href="#" ng-show="employeeService.returnCurrentUser() == 1" ng-click="logOut()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div ui-view></div>
+
+    <!-- Modules -->
+    <script type="text/javascript" src="./libs/jcs-auto-validate.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="./services/carService.js"></script>
+    <script type="text/javascript" src="./services/employeeService.js"></script>
+    <script type="text/javascript" src="./services/companyService.js"></script>
+    <script type="text/javascript" src="./services/propertyService.js"></script>
+    <script type="text/javascript" src="./services/propertyManagerService.js"></script>
+    <script type="text/javascript" src="./services/postmarkService.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="./controllers/carController.js"></script>
+    <script type="text/javascript" src="./controllers/employeeController.js"></script>
+    <script type="text/javascript" src="./controllers/companyController.js"></script>
+    <script type="text/javascript" src="./controllers/propertyController.js"></script>
+    <script type="text/javascript" src="./controllers/propertyManagerController.js"></script>
+    <script type="text/javascript" src="./controllers/plateController.js"></script>
+    <script type="text/javascript" src="./controllers/indexController.js"></script>
+
+</body>
+
+</html>

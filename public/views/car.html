@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="car-bg">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center drop">{{ car.make }} {{ car.model }}</h1>
+                <p>
+                    <strong>Employee ID: </strong>{{ car.employeeId }}</p>
+                <p>
+                    <strong>Year: </strong>{{ car.year }}</p>
+                <p>
+                    <strong>Color: </strong>{{ car.color }}</p>
+                <p>
+                    <strong>License Plate: </strong>{{ car.licensePlate }}</p>
+                <p>
+                    <strong>Permit #: </strong><img class="carImage" src="{{ car.permitNumber }}" alt=""></p>
+                <button class="btn btn-sm btn-info" ui-sref="editCar({id: car.id})">Update</button>
+                <button class="btn btn-sm btn-danger" ng-click="deleteCar()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

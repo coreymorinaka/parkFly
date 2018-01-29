@@ -1,0 +1,40 @@
+<div class="car drop">
+    <div class="container">
+      <h1 class="text-center car-h1">List of Cars</h1>
+  
+      <div class="form-group col-md-12">
+        <input type="text" class="form-control" placeholder="Search for a car" ng-model="carSearch">
+      </div>
+  
+      <div class="row car-section">
+  
+        <table class="table table-hover">
+          <tr>
+            <th>ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Color</th>
+            <th>License Plate</th>
+            <th>Plate IMG</th>
+            <th>Employee ID</th>
+           
+          </tr>
+          <div class="form-group col-md-12 middle">
+  
+          </div>
+          <tr ng-repeat="car in cars | filter: carSearch" ui-sref="car({id: car.id})">
+            <td>{{ car.id }}</td>
+            <td>{{ car.make }}</td>
+            <td>{{ car.model }}</td>
+            <td>{{ car.year }}</td>
+            <td>{{ car.color }}</td>
+            <td>{{ car.licensePlate }}</td>
+            <td><img class="carImage" src="{{ car.permitNumber }}" alt=""></td>
+            <td class="text-center">{{ car.employeeId }}</td>
+            
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>

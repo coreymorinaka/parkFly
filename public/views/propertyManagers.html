@@ -1,0 +1,36 @@
+<div class="propertyManager">
+    <div class="container">
+      <h1 class="text-center propertyManager-h1">List of Property Managers</h1>
+  
+      <div class="form-group col-md-12">
+        <input type="text" class="form-control" placeholder="Search for a Property Manager" ng-model="propertyManagerSearch">
+      </div>
+  
+      <div class="row propertyManager-section">
+  
+        <table class="table table-hover">
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Phone #</th>
+            <th>Management Company</th>
+          </tr>
+          <div class="form-group col-md-12 middle">
+  
+          </div>
+          <tr ng-repeat="propertyManager in propertyManagers | filter: propertyManagerSearch" ui-sref="propertyManager({id: propertyManager.id})">
+            <td>{{ propertyManager.id }}</td>
+            <td>{{ propertyManager.firstName }}</td>
+            <td>{{ propertyManager.lastName }}</td>
+            <td>{{ propertyManager.email }}</td>
+            <td>{{ propertyManager.password }}</td>
+            <td>{{ propertyManager.phoneNumber }}</td>
+            <td>{{ propertyManager.managementCompany }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>

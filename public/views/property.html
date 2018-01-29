@@ -1,0 +1,53 @@
+
+
+<div class="container">
+    <div class="property-bg">
+        <div class="container ">
+            <h1 class="text-center drop">{{ property.locationName }}</h1>
+            <div class="row col-md-4">
+
+                <p>
+                    <strong>Property Manager ID: </strong>{{ property.propertymanagerId }}</p>
+                <p>
+                    <strong>Address: </strong>{{ property.address }}</p>
+                <p>
+                    <strong>City: </strong>{{ property.city }}</p>
+                <p>
+                    <strong>State: </strong>{{ property.state }}</p>
+                <p>
+                    <strong>Zip: </strong>{{ property.zip }}</p>
+                <button class="btn btn-sm btn-info" ui-sref="editProperty({id: property.id})">Update</button>
+                <button class="btn btn-sm btn-danger" ng-click="deleteProperty()">Delete</button>
+
+            </div>
+            <div class="col-md-8 pull-right" id="map"></div>
+            <div class="row company-section">
+
+                <table class="table table-hover">
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Phone #</th>
+                        <th>Suite #</th>
+                        <th>Contact</th>
+                        <th>Max Spaces</th>
+                    </tr>
+                    <div class="form-group col-md-12 middle">
+
+                    </div>
+                    <tr ng-repeat="company in companies | filter: companySearch" ui-sref="company({id: company.id})">
+                        <td>{{ company.companyName }}</td>
+                        <td>{{ company.companyAddress }}</td>
+                        <td>{{ company.companyEmail }}</td>
+                        <td>{{ company.companyPhone }}</td>
+                        <td>{{ company.companySuiteNumber }}</td>
+                        <td>{{ company.companyContact }}</td>
+                        <td>{{ company.companyMaxSpaces }}</td>
+                    </tr>
+                </table>
+                <button class="btn btn-sm btn-success pull-right" ui-sref="newCompany">Add Company</button>
+            </div>
+        </div>
+    </div>
+</div>

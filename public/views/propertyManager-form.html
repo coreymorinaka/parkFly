@@ -1,0 +1,38 @@
+<div class="propertyManager-form">
+    <div class="container">
+        <h1 class="text-center propertyManager-form-header">{{ heading }}</h1>
+
+        <h3 class="propertyManager-section-header">Property Manager Information</h3>
+
+        <form ng-submit="addPropertyManager(propertyManager)">
+
+            <div class="form-group col-md-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="Andre" ng-model="propertyManager.firstName" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Khu" ng-model="propertyManager.lastName" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="akhu@gmail.com" ng-model="propertyManager.email" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Password</label>
+                <input type="text" class="form-control" placeholder="**********" ng-model="propertyManager.password" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Cell Phone #</label>
+                <input type="text" class="form-control" placeholder="7149118726" ng-model="propertyManager.phoneNumber" required="required">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg pull-right" ng-show="submitButton">Submit</button>
+            <button ng-click="updatePropertyManager(propertyManager)" class="btn btn-success btn-lg pull-right" ng-show="!submitButton">Save</button>
+        </form>
+    </div>
+</div>

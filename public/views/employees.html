@@ -1,0 +1,36 @@
+<div class="employee drop">
+    <div class="container drop">
+      <h1 class="text-center employee-h1">List of Employees</h1>
+  
+      <div class="form-group col-md-12">
+        <input type="text" class="form-control" placeholder="Search for a employee" ng-model="employeeSearch">
+      </div>
+  
+      <div class="row employee-section">
+  
+        <table class="table table-hover">
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Cell Phone #</th>
+            <th>Company ID</th>
+          </tr>
+          <div class="form-group col-md-12 middle">
+  
+          </div>
+          <tr ng-repeat="employee in employees | filter: employeeSearch" ui-sref="employee({id: employee.id})">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.password }}</td>
+            <td>{{ employee.cellNumber }}</td>
+            <td class="text-center">{{ employee.companyId }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>

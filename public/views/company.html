@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="company-bg">
+        <div class="container">
+            <div class="row">
+
+                    <div class="col-md-6 leftDisplay">
+                        <div class="col-md-6">
+                                <strong>Property ID: </strong>{{ company.propertyId }}</p>
+                                <p>
+                                    <strong>Address: </strong>{{ company.companyAddress }}</p>
+                                <p>
+                                    <strong>Email: </strong>{{ company.companyEmail }}</p>
+                                    <button class="btn btn-sm btn-info" ui-sref="editCompany({id: company.id})">Update</button>
+                                    <button class="btn btn-sm btn-danger" ng-click="deleteCompany()">Delete</button>
+                        </div>
+                        <div class="col-md-6">
+                                <p>
+                                        <strong>Phone #: </strong>{{ company.companyPhone }}</p>
+                                    <p>
+                                        <strong>Suite #: </strong>{{ company.companySuiteNumber }}</p>
+                                    <p>
+                                        <strong>Contact: </strong>{{ company.companyContact }}</p>
+                                    <p>
+                                        <strong>Max Spaces: </strong>{{ company.companyMaxSpaces }}</p>
+                                    
+
+                        </div>
+                            <p>
+                                    
+                             
+                        </div>
+
+                        <div class="col-md-6"></div>
+
+                <h1 class="text-center drop">{{ company.companyName }}</h1>
+               
+            </div>
+            <div class="row employee-section">
+
+                <table class="table table-hover">
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Cell Phone #</th>
+                    </tr>
+                    <div class="form-group col-md-12 middle">
+                            <tr ng-repeat="employee in employees | filter: employeeSearch" ui-sref="employee({id: employee.id})">
+                                    <td>{{ employee.id }}</td>
+                                    <td>{{ employee.firstName }}</td>
+                                    <td>{{ employee.lastName }}</td>
+                                    <td>{{ employee.email }}</td>
+                                    <td>{{ employee.password }}</td>
+                                    <td>{{ employee.cellNumber }}</td>
+                                </tr>
+                            </table>
+                            <button class="btn btn-sm btn-success pull-right" ui-sref="newEmployee">Add Employee</button>
+                    </div>
+                   
+            </div>
+        </div>
+    </div>
+</div>

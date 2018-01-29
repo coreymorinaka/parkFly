@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#map {
+    width: 68%;
+    height: 250px;
+    border: 1px solid black;
+  }
+
+.drop {
+    padding: 100px;
+}
+.buttonDrop {
+    margin: 1px;
+}
+
+.padding {
+      padding: 9px;
+  }
+
+.compaines {
+    padding: 15px;
+}
+
+.main-header {
+  padding: 15spx;  
+} 
+/* 
+#menu {
+
+}
+
+#main-text {
+
+}
+
+#footer {
+
+} */
+
+.box {
+    position: relative;
+    width: 100%;
+    max-width:1200px;
+}
+
+.box img {
+    width: 100%;
+    height: 20%;
+}
+
+.box .btn {
+    position: absolute;
+    top: 90%;
+    left: 89.1%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #091e9b;
+    color: white;
+    font-size: 25px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box .btnPM {
+    position: absolute;
+    top: 90%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #091e9b;
+    color: white;
+    font-size: 25px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box .btn:hover {
+    background-color: grey;
+}
+.box .btnPM:hover {
+    background-color: grey;
+}
+
+.display {
+    border-style: groove;
+    border-bottom-color: grey;
+    border: 1px solid #091e9b;
+    padding: 50px 30px 30px 30px;
+    text-align: center;
+    /* background-color: lightblue; */
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+
+.leftDisplay {
+    border-style: groove;
+    border-bottom-color: grey;
+    border: 0px solid #091e9b;
+    padding: 50px 30px 30px 30px;
+    text-align: center;
+    /* background-color: lightblue; */
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+
+.carImage {
+    height: 150px;
+    width: 220px;
+}
+
+.rowTDcolor {
+    color: lightgrey;
+}
+

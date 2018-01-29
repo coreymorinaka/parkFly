@@ -1,0 +1,70 @@
+<div class="menu">
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="container">
+            <ul class="nav nav-pills">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/logo_blue.png" alt="" width="100" height="30">
+                </a>
+                <!-- <li class="padding" role="presentation">
+                    <button class="btn btn-link" onclick="display('about')">About</button>
+                </li> -->
+                <li class="padding" role="presentation">
+                    <button class="btn btn-link" ng-click="display('company')">Company</button>
+                </li>
+                <li class="padding" role="presentation">
+                    <button class="btn btn-link" ng-click="display('info')">Information</button>
+                </li>
+                <li class="navbar-right" role="presentation">
+                    <a href="#">Employee Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+
+
+
+<div class="container">
+    <div class="propertyManager-bg">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">{{ propertyManager.firstName }} {{ propertyManager.lastName }}</h1>
+                <p>
+                    <strong>Email: </strong>{{ propertyManager.email }}</p>
+                <p>
+                    <strong>Password: </strong>{{ propertyManager.password }}</p>
+                <p>
+                    <strong>Cell Phone #: </strong>{{ propertyManager.phoneNumber }}</p>
+                <button class="btn btn-sm btn-info" ui-sref="editPropertyManager({id: propertyManager.id})">Update</button>
+                <button class="btn btn-sm btn-danger" ng-click="deletePropertyManager()">Delete</button>
+            </div>
+            <div class="row property-section">
+  
+                <table class="table table-hover">
+                  <tr>
+                    <th>Location Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                  </tr>
+                  <div class="form-group col-md-12 middle">
+          
+                  </div>
+                  <tr ng-repeat="property in properties | filter: propertySearch" ui-sref="property({id: property.id})">
+                    <td>{{ property.locationName }}</td>
+                    <td>{{ property.address }}</td>
+                    <td>{{ property.city }}</td>
+                    <td>{{ property.state }}</td>
+                    <td>{{ property.zip }}</td>
+
+                  </tr>
+                </table>
+                <button class="btn btn-sm btn-success pull-right" ui-sref="newProperty">Add Property</button>
+              </div>
+        </div>
+    </div>
+</div>

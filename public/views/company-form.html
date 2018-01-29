@@ -1,0 +1,51 @@
+<div class="company-form drop">
+    <div class="container">
+        <h1 class="text-center company-form-header">{{ heading }}</h1>
+
+        <h3 class="company-section-header">Company Information</h3>
+
+        <form ng-submit="addCompany(company)">
+
+            <div class="form-group col-md-6">
+                <label>Company Name</label>
+                <input type="text" class="form-control" placeholder="Mag's Donuts" ng-model="company.companyName" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Address</label>
+                <input type="text" class="form-control" placeholder="2134 Dyer Rd." ng-model="company.companyAddress" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="text" class="form-control" placeholder="mag@gmail.com" ng-model="company.companyEmail" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" placeholder="7148287462" ng-model="company.companyPhone" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Suite #</label>
+                <input type="text" class="form-control" placeholder="109" ng-model="company.companySuiteNumber" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Contact Person</label>
+                <input type="text" class="form-control" placeholder="Mag Magerson" ng-model="company.companyContact" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Max Spaces</label>
+                <input type="text" class="form-control" placeholder="3" ng-model="company.companyMaxSpaces" required="required">
+            </div>
+
+            <div class="form-group col-md-6">
+                    <button type="submit" class="btn btn-primary btn-lg pull-right" ng-show="submitButton">Submit</button>
+                    <button  ng-click="updateCompany(company)" class="btn btn-success btn-lg pull-right" ng-show="!submitButton">Save</button>
+            </div>
+          
+        </form>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+        <div class="employee-bg">
+            <div class="container">
+                    <!-- <h1 class="text-center drop">{{ employee.firstName }} {{ employee.lastName }}</h1> -->
+                    <!-- <button class="btn btn-danger pull-right" ui-sref="home">Logout</button> -->
+
+                    <div class="row">
+                        <div class="col-md-6 leftDisplay">
+                                
+                        </div>
+                        
+                       
+                    </div>
+
+                <div class="row">
+
+                    <p>
+                        <strong>Company: </strong>{{ employee.companyId }}</p>
+                    <p>
+                        <strong>Email: </strong>{{ employee.email }}</p>
+                    <p>
+                        <strong>Password: </strong>{{ employee.password }}</p>
+                    <p>
+                        <strong>Cell Phone #: </strong>{{ employee.cellNumber }}</p>
+                    <button class="btn btn-sm btn-info" ui-sref="editEmployee({id: employee.id})">Update</button>
+                </div>
+                <div class="row car-section">
+      
+                    <table class="table table-hover">
+                      <tr>
+                        <th>ID</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Color</th>
+                        <th>License Plate</th>
+                        <th>Plate IMG</th>
+                        <th>Employee ID</th>
+                      </tr>
+                      <div class="form-group col-md-12 middle">
+              
+                      </div>
+                      <tr ng-repeat="car in cars | filter: carSearch" ui-sref="car({id: car.id})">
+                        <td>{{ car.id }}</td>
+                        <td>{{ car.make }}</td>
+                        <td>{{ car.model }}</td>
+                        <td>{{ car.year }}</td>
+                        <td>{{ car.color }}</td>
+                        <td>{{ car.licensePlate }}</td>
+                        <td><img src="{{ car.permitNumber }}" class="carImage" alt=""></td>
+                        <td>{{ car.employeeId }}</td>
+                      </tr>
+                    </table>
+                    <button class="btn btn-sm btn-success pull-right" ui-sref="newCar">Add Car</button>
+                  </div>
+            </div>
+        </div>
+    </div>
